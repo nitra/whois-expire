@@ -3478,6 +3478,13 @@ which@^1.2.9, which@^1.3.0:
   dependencies:
     isexe "^2.0.0"
 
+whoiser@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/whoiser/-/whoiser-1.4.0.tgz#8a1639eb71f1cd3d49dd64c26093c524484e3a9d"
+  integrity sha512-MahnJ2+tcK2li9GQeN2zTyEwgfn/J+x1GgXPMOr/Taw4kMWVFolpLk95LDW2Bhu1650SmKHqzjCyN7jzm/W+Pw==
+  dependencies:
+    punycode "^2.1.1"
+
 wide-align@^1.1.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/wide-align/-/wide-align-1.1.3.tgz#ae074e6bdc0c14a431e804e624549c633b000457"

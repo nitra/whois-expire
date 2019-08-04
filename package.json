@@ -1,0 +1,28 @@
+{
+  "name": "@nitra/whois-expire",
+  "version": "1.0.0",
+  "description": "Get domain expiration date",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitra/whois-expire.git"
+  },
+  "keywords": [
+    "whois"
+  ],
+  "author": "nitra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitra/whois-expire/issues"
+  },
+  "homepage": "https://github.com/nitra/whois-expire#readme",
+  "prettier": "prettier-config-standard",
+  "devDependencies": {
+    "@types/jest": "^24.0.16",
+    "jest": "^24.8.0",
+    "prettier-config-standard": "^1.0.1"
+  }
+}

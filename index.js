@@ -4,21 +4,18 @@ const whoiser = require('whoiser');
  * Get domain expiration date
  *
  * @param {string} domain - Domain name
- * @return {string} domain expiration date
+ * @return {Promise<Date>} domain expiration date
  *
  * @example
  *
  *     whoisExpire('nitra.ai')
  */
 async function whoisExpire(domain) {
-        // WHOIS info with auto-discovering for WHOIS server
-        let domainInfo = await whoiser.domain('nitra.ai')
- 
-        // OR with options for whois server and how many servers to check
-        // let domainInfo2 = await whoiser.domain('blog.google', {host: 'whois.nic.google', follow: 3})
-     
-        console.log(domainInfo)
+        const domainInfo = await whoiser.domain(domain)
+        const firstData = domainInfo[Object.keys(domainInfo)[0]]
+        const whooisDate = firstData['Registry Expiry Date'] || firstData['Expires'] || firstData['expires']|| firstData['paid-till'] 
+        const result = new Date(Date.parse(whooisDate))
 
-  return domain
+  return result
 }
 module.exports = whoisExpire

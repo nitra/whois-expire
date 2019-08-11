@@ -20,7 +20,18 @@ async function whoisExpire (domain) {
     log.debug(whooisDate)
     return new Date(Date.parse(whooisDate))
   }
-
-  log.debug(domainInfo)
+  // adv24.lt
+  if (firstData['text']) {
+    for (const line of firstData['text']) {
+      const lineLowered = line.toLowerCase()
+      if (lineLowered.startsWith('expires')) {
+        const lineDate = line.substr(-10, 10)
+        if (lineDate) {
+          return new Date(Date.parse(lineDate))
+        }
+      }
+    }
+  }
+  log.debug(domain, domainInfo)
 }
 module.exports = whoisExpire
